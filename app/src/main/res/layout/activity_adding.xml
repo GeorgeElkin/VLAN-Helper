@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/addingAddressSectionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/address_section_label"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/addingStreetEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Улица"
+        android:autofillHints="Артёма"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/addingAddressSectionTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/addingStreetTypeSpinner"
+        android:layout_marginStart="8dp"/>
+
+    <Spinner
+        android:id="@+id/addingStreetTypeSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/addingStreetEditText"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/addingHouseTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="дом"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/addingStreetEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/addingHouseEditText"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/addingStreetEditText"
+        app:layout_constraintStart_toEndOf="@id/addingHouseTextView"
+        android:layout_marginStart="8dp"
+        android:hint="1"
+        android:autofillHints="1"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/addingBuildingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="корпус"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/addingStreetEditText"
+        app:layout_constraintStart_toEndOf="@id/addingHouseEditText"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/addingBuildingEditText"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/addingStreetEditText"
+        app:layout_constraintStart_toEndOf="@id/addingBuildingTextView"
+        android:layout_marginStart="8dp"
+        android:hint="1"
+        android:autofillHints="1"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/addingOptionsSectionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/options_section_label"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/addingBuildingEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/addingVlanTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VLAN:"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/addingOptionsSectionTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/addingVlanEditText"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/addingOptionsSectionTextView"
+        app:layout_constraintStart_toEndOf="@id/addingVlanTextView"
+        android:layout_marginStart="8dp"
+        android:hint="1"
+        android:autofillHints="1"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/addingButtonAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="добавить"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ProgressBar
+        android:id="@+id/addingProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
